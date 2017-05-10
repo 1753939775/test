@@ -1,0 +1,14 @@
+
+//将一个数逆序输出
+//leetcode 第7题 
+class Solution {
+public:
+    int reverse(int x) {
+        int y=0;
+        while(x){
+            y=x%10+y*10;
+            x=x/10;
+        }
+        return (y<INT_MIN||y>INT_MAX) ? 0 : y;
+    }
+};
